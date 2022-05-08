@@ -12,14 +12,6 @@ export default (...extend) => {
             key: 'placeholder',
             ignore: true,
           },
-          {
-            // Or add your own. The syntax is form.io component definitions.
-            type: 'textfield',
-            input: true,
-            label: 'My Custom Setting',
-            weight: 12,
-            key: 'myCustomSetting', // This will be available as component.myCustomSetting
-          },
         ],
       },
       {

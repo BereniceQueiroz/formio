@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;700&family=Lato&family=Montserrat:wght@400;500;700&family=Poppins:wght@400;500;700&family=Radio+Canada:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,300&family=Ubuntu:wght@400;500;700&display=swap');
+@import './variaveis.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing : border-box;
+}
+.App {
+  max-width: 1024px;
+  margin: 50px auto;
+  font-family: sans-serif;
+  text-align: center;
+}
+.font-Arial {
+  font-family: $font-Arial;
+}
+.font-Roboto {
+  font-family: $font-Roboto;
+}
+.font-Poppins {
+  font-family: $font-Poppins;
+}
+.font-FiraCode {
+  font-family: $font-FiraCode;
+}
+.font-Montserrat {
+  font-family: $font-Montserrat;
+}
+.font-Ubuntu {
+  font-family: font-Ubuntu;
+}
+.font-Radio {
+  font-family: $font-Radio;
+}
+
+.fontWeightRegular {
+  font-weight: $fontWeightRegular;
+}
+.fontWeightSemiBold {
+  font-weight: $fontWeightSemiBold;
+}
+.fontWeightBold {
+  font-weight: $fontWeightBold;
+}
+
+.lineHeightSM {
+  line-height: $lineHeightSM;
+}
+.lineHeightMD {
+  line-height: $lineHeightMD;
+}
+.lineHeightLG {
+  line-height: $lineHeightLG;
+}
+.lineHeightUL {
+  line-height: $lineHeightUL;
+}
+
+.fontSizeXSmall {
+  font-size: $fontSizeXSmall;
+}
+.fontSizeSmall {
+  font-size: $fontSizeSmall;
+}
+.fontSizeMedium {
+  font-size: $fontSizeMedium;
+}
+.fontSizeLarge {
+  font-size: $fontSizeLarge;
+}
+.fontSizeXLarge {
+  font-size: $fontSizeXLarge;
+}
+.fontSizeXXLarge {
+  font-size: $fontSizeXXLarge;
+}
+.fontSizeHuge {
+  font-size: $fontSizeHuge;
+}
+.fontSizeXHuge {
+  font-size: $fontSizeXHuge;
+}
+.fontSizeXXHuge {
+  font-size: $fontSizeXXHuge;
+}
+.fontSizeXXHuge {
+  font-size: $fontSizeXXXHuge;
+}
+
+.p1 {
+  padding:$p1;
+}
+.p2 {
+  padding:$p2;
+}
+.p3{
+  padding:$p3;
+}
+.p4 {
+  padding:$p4;
+}
+.p5 {
+  padding:$p5;
+}
+.pt1 {
+  padding-top: $pt1;
+}
+.pt2 {
+  padding-top:$pt2;
+}
+.pt3{
+  padding-top:$pt3;
+}
+.pt4 {
+  padding-top:$pt4;
+}
+.pt5 {
+  padding-top:$pt5;
+}
+.pb1 {
+  padding-bottom:$pb1;
+}
+.pb2 {
+  padding-bottom:$pb2;
+}
+.pb3{
+  padding-bottom:$pb3;
+}
+.pb4 {
+  padding-bottom:$pb4;
+}
+.pb5 {
+  padding-bottom:$pb5;
+}
+.pr1 {
+  padding-right:$pr1;
+}
+.pr2 {
+  padding-right:$pr2;
+}
+.pr3{
+  padding-right:$pr3;
+}
+.pr4 {
+  padding-right:$pr4;
+}
+.pr5 {
+  padding-right:$pr5;
+}
+.pl1 {
+  padding-left:$pl1;
+}
+.pl2 {
+  padding-left:$pl2;
+}
+.pl3{
+  padding-left:$pl3;
+}
+.pl4 {
+  padding-left:$pl4;
+}
+.pl5 {
+  padding-left:$pl5;
+}
+
+.m1 {
+  margin:$m1;
+}
+.m2 {
+  margin:$m2;
+}
+.m3 {
+  margin:$m3;
+}
+.m4 {
+  margin:$m4;
+}
+.m5{
+  margin:$m5;
+}
+.mt1 {
+  margin-top:$mt1;
+}
+.mt2 {
+  margin-top:$mt2;
+}
+.mt3{
+  margin-top:$mt3;
+}
+.mt4 {
+  margin-top:$mt4;
+}
+.mt5 {
+  margin-top:$mt5;
+}
+.mb1 {
+  margin-bottom:$mb1;
+}
+.mb2 {
+  margin-bottom:$mb2;
+}
+.mb3{
+  margin-bottom:$mb3;
+}
+.mb4 {
+  margin-bottom:$mb4;
+}
+.mb5 {
+  margin-bottom:$mb5;
+}
+.mr1 {
+  margin-right:$mr1;
+}
+.mr2 {
+  margin-right:$mr2;
+}
+.mr3{
+  margin-right:$mr3;
+}
+.mr4 {
+  margin-right:$mr4;
+}
+.mr5 {
+  margin-right:$mr5;
+}
+.ml1 {
+  margin-left:$ml1;
+}
+.ml2 {
+  margin-left:$ml2;
+}
+.ml3{
+  margin-left:$ml3;
+}
+.ml4 {
+  margin-left:$ml4;
+}
+.ml5 {
+  margin-left:$ml5;
+}
+.borderRadiusNone {
+  border-radius: $borderRadiusNone;
+}
+.borderRadiusSM {
+  border-radius: $borderRadiusSM;
+}
+.borderRadiusMD {
+  border-radius: $borderRadiusMD;
+}
+.borderRadiusLG {  
+  border-radius: $borderRadiusLG;
+}
+.borderRadiusXL {
+  border-radius: $borderRadiusXL;
+}
+.borderRadiusCircle {
+  border-radius: $borderRadiusCircle;
+}
+.borderNone {
+  border: $borderNone;
+}
+
+//borders
+.borderSolidSM {
+  border: $borderSolidSM;
+}
+.borderSolidMD {
+  border: $borderSolidMD;
+}
+.borderDashedSM {
+  border: $borderDashedSM;
+}
+.borderDashedMD {
+  border:$borderDashedMD;
+}
+
+.borderSolidSMTop {
+  border-top: $borderSolidSM;
+}
+.borderSolidMDTop {
+  border-top: $borderSolidMD;
+}
+.borderDashedSMTop {
+  border-top: $borderDashedSM;
+}
+.borderDashedMDTop {
+  border-top:$borderDashedMD;
+}
+
+.borderSolidSMBottom {
+  border-bottom: $borderSolidSM;
+}
+.borderSolidMDBottom {
+  border-bottom: $borderSolidMD;
+}
+.borderDashedSMBottom {
+  border-bottom: $borderDashedSM;
+}
+.borderDashedMDBottom {
+  border-bottom:$borderDashedMD;
+}
+.borderColorBlue {
+  border-color: $colorBlueN1;
+}
+.borderColorGreen {
+  border-color: $colorGreenN1;
+}
+.borderColorBlack {
+  border-color: $colorBlackN1;
+}
+.borderColorPurple {
+  border-color:$colorPurpleN1;
+}
+
+//Colors
+.colorBlueN1{
+  color: $colorBlueN1;
+}
+.colorBlueN2 {
+  color: $colorBlueN2;
+}
+.colorBlueN3 {
+  color: $colorBlueN3;
+}
+.colorBlueN4 {
+  color: $colorBlueN4;
+}
+.colorBlueN5 {
+  color: $colorBlueN5;
+}
+.colorGreenN1{
+  color: $colorGreenN1;
+}
+.colorGreenN2 {
+  color: $colorGreenN2;
+}
+.colorGreenN3 {
+  color: $colorGreenN3;
+}
+.colorGreenN4 {
+  color: $colorGreenN4;
+}
+.colorGreenN5 {
+  color: $colorGreenN5;
+}
+.colorBlackN1{
+  color: $colorBlackN1;
+}
+.colorBlackN2 {
+  color: $colorBlackN2;
+}
+.colorBlackN3 {
+  color: $colorBlackN3;
+}
+.colorBlackN4 {
+  color: $colorBlackN4;
+}
+.colorBlackN5 {
+  color: $colorBlackN5;
+}
+.colorPurpleN1{
+  color: $colorPurpleN1;
+}
+.colorPurpleN2 {
+  color: $colorPurpleN2;
+}
+.colorPurpleN3 {
+  color:$colorPurpleN3;
+}
+.colorPurpleN4 {
+  color: $colorPurpleN4;
+}
+.colorPurpleN5 {
+  color: $colorPurpleN5;
+}
+
+.colorRedN1{
+  color: $colorRedN1;
+}
+.colorRedN2 {
+  color: $colorRedN2;
+}
+.colorRedN3 {
+  color:$colorRedN3;
+}
+.colorRedN4 {
+  color: $colorRedN4;
+}
+.colorRedN5{
+  color: $colorRedN5;
+}
+
+.colorYellowN1{
+  color: $colorYellowN1;
+}
+.colorYellowN2 {
+  color: $colorYellowN2;
+}
+.colorYellowN3 {
+  color:$colorYellowN3;
+}
+.colorYellowN4 {
+  color: $colorYellowN4;
+}
+.colorYellowN5{
+  color: $colorYellowN5;
+}
+
+
+
+.bg-primary {
+  background-color: transparent;
+}
+.bg-info {
+  background-color: #28a4e5 !important;
+}
+.bg-sucess {
+  background-color: #0d9405 !important;
+}
+.bg-danger {
+  background-color: #d61f30 !important;
+}
+.bg-warning {
+  background-color: #f8a163 !important;
+}
+
+.bg-BlueN1 {
+  background-color: $colorGreenN1 !important;
+}
+
+.textareaGreen {
+  textarea {
+    color: green !important;
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textareaRed {
+  textarea {
+    color: red !important;
+  }
+}
+.textareaRed {
+  textarea {
+    color: red !important;
+  }
+}
+
+.primaryTheme {
+  font-family: $font-Poppins;
+  font-size: $fontSizeLarge;
+  padding: $p1;
+  background-color: $colorGreenN2;
+}
+
+.secondaryTheme {
+  font-family: $font-FiraCode;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeXLarge;
+  padding: $pb3;
+  background-color: $colorBlueN4;
+}
+
+.borderSolidTheme {
+  font-family: $font-FiraCode;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeXLarge;
+  padding: $pb3;
+  border: $borderSolidSM;
+  border-color: $colorPurpleN1;
+}
+
+.borderDashedTheme {
+  font-family: $font-FiraCode;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeXLarge;
+  padding: $pb3;
+  border: $borderDashedMD;
+  border-color: $colorGreenN5;
+}

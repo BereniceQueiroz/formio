@@ -2,17 +2,45 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { ReactComponent } from 'react-formio';
 import settingsForm from './Rating.settingsForm';
-import EmojiRating from 'react-emoji-rating';
+import { EmoRating } from 'emo-rating-react';
+import 'emo-rating-react/dist/index.css';
 
-/**
- * An example React component
- *
- * Replace this with your custom react component. It needs to have two things.
- * 1. The value should be stored is state as "value"
- * 2. When the value changes, call props.onChange(null, newValue);
- *
- * This component is very simple. When clicked, it will set its value to "Changed".
- */
+const ratingData = [
+  {
+    id: 1,
+    text: 'Muito insatisfeito',
+    icon: 'https://i.ibb.co/BPKK8Hm/terrible-icon.png',
+    icon_selected: 'https://i.ibb.co/r6qN2YV/terrible-big-icon.png',
+  },
+  {
+    id: 2,
+    text: 'Insatisfeito',
+    icon: 'https://i.ibb.co/9hLWPYh/bad-icon.png',
+    icon_selected: 'https://i.ibb.co/71rzMSt/sad-big-icon.png',
+  },
+  {
+    id: 3,
+    text: 'Neutro',
+    icon: 'https://i.ibb.co/QcGswBH/okay-icon.png',
+    icon_selected: 'https://i.ibb.co/HTvbnRP/okay-big-icon.png',
+  },
+  {
+    id: 4,
+    text: 'Satisfeito',
+    icon: 'https://i.ibb.co/Z8xYwcs/good-icon.png',
+    icon_selected: 'https://i.ibb.co/6tf34hJ/happy-big-icon.png',
+  },
+  {
+    id: 5,
+    text: 'Muito satisfeito',
+    icon: 'https://i.ibb.co/4WzvFsm/great-icon.png',
+    icon_selected: 'https://i.ibb.co/rsh9BNt/great-big-icon.png',
+  },
+];
+
+const defaultSelected = 3;
+const size = 80;
+
 const RatingCustomComp = class extends Component {
   constructor(props) {
     super(props);
@@ -28,12 +56,24 @@ const RatingCustomComp = class extends Component {
     );
   };
 
+  handleOnChange = (selectedRating, e) => {
+    console.log(selectedRating);
+  };
+
   render() {
-    return <EmojiRating variant="emoticons" onChange={this.setValue} />;
+    return (
+      <EmoRating
+        ratingData={ratingData}
+        onChange={this.handleOnChange}
+        defaultSelected={defaultSelected}
+        customClassName="rating"
+        size={size}
+      />
+    );
   }
 };
 
-export default class Rating extends ReactComponent {
+export default class RatingComponent extends ReactComponent {
   /**
    * This function tells the form builder about your component. It's name, icon and what group it should be in.
    *
@@ -42,11 +82,11 @@ export default class Rating extends ReactComponent {
   static get builderInfo() {
     return {
       title: 'Rating',
-      icon: 'star',
+      icon: 'square',
       group: 'Data',
       documentation: '',
       weight: -10,
-      schema: Rating.schema(),
+      schema: RatingComponent.schema(),
     };
   }
 

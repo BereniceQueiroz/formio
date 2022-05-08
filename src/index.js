@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { FormBuilder, Components } from 'react-formio';
-import './styles.css';
+import './styles/styles.scss';
 import components from './Custom';
 
 Components.setComponents(components);
@@ -14,13 +14,13 @@ function App() {
         onChange={(schema) => console.log(schema)}
         options={{
           builder: {
-            basic: {
+            custom: {
+              title: 'Custom',
+              weight: 2,
               components: {
-                toggleCustomComp: true,
                 ratingCustomComp: true,
               },
             },
-            advanced: false,
           },
         }}
       />
