@@ -90,46 +90,24 @@ export default class RatingComponent extends ReactComponent {
     };
   }
 
-  /**
-   * This function is the default settings for the component. At a minimum you want to set the type to the registered
-   * type of your component (i.e. when you call Components.setComponent('type', MyComponent) these types should match.
-   *
-   * @param sources
-   * @returns {*}
-   */
   static schema() {
     return ReactComponent.schema({
       type: 'ratingCustomComp',
     });
   }
 
-  /*
-   * Defines the settingsForm when editing a component in the builder.
-   */
   static editForm = settingsForm;
-
-  /**
-   * This function is called when the DIV has been rendered and added to the DOM. You can now instantiate the react component.
-   *
-   * @param DOMElement
-   * #returns ReactInstance
-   */
   attachReact(element) {
     return ReactDOM.render(
       <RatingCustomComp
-        component={this.component} // These are the component settings if you want to use them to render the component.
-        value={this.dataValue} // The starting value of the component.
-        onChange={this.updateValue} // The onChange event to call when the value changes.
+        component={this.component}
+        value={this.dataValue}
+        onChange={this.updateValue}
       />,
       element
     );
   }
 
-  /**
-   * Automatically detach any react components.
-   *
-   * @param element
-   */
   detachReact(element) {
     if (element) {
       ReactDOM.unmountComponentAtNode(element);
