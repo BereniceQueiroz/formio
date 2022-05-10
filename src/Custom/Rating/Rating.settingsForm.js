@@ -8,7 +8,6 @@ export default (...extend) => {
         key: 'display',
         components: [
           {
-            // You can ignore existing fields.
             key: 'placeholder',
             ignore: true,
           },
